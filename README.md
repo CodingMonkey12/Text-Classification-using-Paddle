@@ -40,12 +40,12 @@ If you want to deploy models, you also need to install:
 ## 📚 Files
 
 * There are two folders:
-  * `1 - train`: Only to train a model that can predict text
-  * `2 - deploy`: Only to deploy the trained model on VPS, and set up API
+  * `1-train`: Only to train a model that can predict text
+  * `2-deploy`: Only to deploy the trained model on VPS, and set up API
 * It used `Jupyter Notebook` to easily start. Of course you can convert `.ipynb` to `.py`
 * The step is the index of the files
-* For example, you will run the file started with `1 - xxx.ipynb`, and then run the file started with `2 - xxx.ipynb`
-* The files in `1 - train/checkpoint` and `2 - deploy/models` folder are fake files! You must get these files after running ipynb
+* For example, you will run the file started with `1-xxx.ipynb`, and then run the file started with `2-xxx.ipynb`
+* The files in `1-train/checkpoint` and `2-deploy/models` folder are fake files! You must get these files after running ipynb
 
 ## 📖 Data
 
@@ -72,19 +72,19 @@ If you want to deploy models, you also need to install:
 Maybe there are something you have to change. For example: path
 
 * Step 1: run `train.ipynb`. After running, you can get the model in `checkpoint` folder
-  * If your text language is Chinese, please run `1.1 - train_Chinese.ipynb`
-  * Else if your text language is English, please run `1.2 - train_English.ipynb`
-* Step 2(Optional): run `2 - evaluate.ipynb`. After running, you can get the classification reports
-* Step 3(Optional): run `3 - predict.ipynb`. After running, you can get the prediction from your file
-* Step 4(Optional): run `4 - predict_only_one.ipynb`. After running, you can predict only one text
-* Step 5: run `5 - to_static.ipynb`. After running, you can get the infer model that can be deployed
-* Step 6(Optional): run `6 - infer.ipynb`. A test to infer
+  * If your text language is Chinese, please run `1.1-train_Chinese.ipynb`
+  * Else if your text language is English, please run `1.2-train_English.ipynb`
+* Step 2(Optional): run `2-evaluate.ipynb`. After running, you can get the classification reports
+* Step 3(Optional): run `3-predict.ipynb`. After running, you can get the prediction from your file
+* Step 4(Optional): run `4-predict_only_one.ipynb`. After running, you can predict only one text
+* Step 5: run `5-to_static.ipynb`. After running, you can get the infer model that can be deployed
+* Step 6(Optional): run `6-infer.ipynb`. A test to infer
 
 ## 📢 Deploy
 
 After getting the infer model, you can deploy it by using FastAPI or other API framework.
 
-Please copy your files into `2 - deploy/models/English` or `2 - deploy/models/Chinese` and make them in your model folder like:
+Please copy your files into `2-deploy/models/English` or `2-deploy/models/Chinese` and make them in your model folder like:
 
 * label_map.json
 * model.pdiparams

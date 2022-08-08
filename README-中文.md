@@ -40,12 +40,12 @@
 ## 📚 文件
 
 * 主要有2个文件夹：
-  * `1 - train`: 用来训练得到能够进行预测的模型
-  * `2 - deploy`: 用来部署训练得到的模型，作为API
+  * `1-train`: 用来训练得到能够进行预测的模型
+  * `2-deploy`: 用来部署训练得到的模型，作为API
 * 程序主要使用了 `Jupyter Notebook` 。你也可把 `.ipynb` 转换为 `.py`
 * 文件前面的序号是你需要运行的顺序
-* 比如，你会先运行 `1 - xxx.ipynb` ，然后运行 `2 - xxx.ipynb`
-* `1 - train/checkpoint` 和 `2 - deploy/models` 文件夹中的文件都是假文件，真正的文件需要你通过训练得到
+* 比如，你会先运行 `1-xxx.ipynb` ，然后运行 `2-xxx.ipynb`
+* `1-train/checkpoint` 和 `2-deploy/models` 文件夹中的文件都是假文件，真正的文件需要你通过训练得到
 
 ## 📖 数据
 
@@ -71,19 +71,19 @@
 可能有些东西需要你自己进行调整。比如：路径
 
 * 步骤1：运行 `train.ipynb` 。运行后，在 `checkpoint` 文件夹中会生成训练后的模型
-  * 如果你的文本是中文的，请运行 `1.1 - train_Chinese.ipynb`
-  * 如果你的文本是英文的，请运行 `1.2 - train_English.ipynb`
-* 步骤2（可选）：运行 `2 - evaluate.ipynb` 。运行后，可以得到分类报告
-* 步骤3（可选）：运行 `3 - predict.ipynb` 。运行后，可以读取文件进行批量预测
-* 步骤4（可选）：运行 `4 - predict_only_one.ipynb` 。运行后，可以单独预测一条文本
-* 步骤5：运行 `5 - to_static.ipynb` 。运行后，可以得到能够部署的静态图模型
-* 步骤6（可选）：运行 `6 - infer.ipynb` 。用来测试部署
+  * 如果你的文本是中文的，请运行 `1.1-train_Chinese.ipynb`
+  * 如果你的文本是英文的，请运行 `1.2-train_English.ipynb`
+* 步骤2（可选）：运行 `2-evaluate.ipynb` 。运行后，可以得到分类报告
+* 步骤3（可选）：运行 `3-predict.ipynb` 。运行后，可以读取文件进行批量预测
+* 步骤4（可选）：运行 `4-predict_only_one.ipynb` 。运行后，可以单独预测一条文本
+* 步骤5：运行 `5-to_static.ipynb` 。运行后，可以得到能够部署的静态图模型
+* 步骤6（可选）：运行 `6-infer.ipynb` 。用来测试部署
 
 ## 📢 部署
 
 得到能够部署的静态图模型后，可以使用 FastAPI 或者其他 API 框架进行部署。
 
-把训练和转换得到的模型放到 `2 - deploy/models/English` 或者 `2 - deploy/models/Chinese` 中，并且让它们像下面这个样子：
+把训练和转换得到的模型放到 `2-deploy/models/English` 或者 `2-deploy/models/Chinese` 中，并且让它们像下面这个样子：
 
 * label_map.json
 * model.pdiparams
