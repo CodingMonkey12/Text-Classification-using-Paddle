@@ -3,7 +3,7 @@
 ## 🎨 Language
 
 * [English](/README.md)
-* [中文](/README-中文.md)
+* [中文](/README-zh.md)
 
 ## 📝 Description
 
